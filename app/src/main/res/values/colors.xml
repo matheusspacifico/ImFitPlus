@@ -2,6 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- got the colors from here: https://tailscan.com/colors -->
     <color name="screen_bg">#ffe4e6</color>
     <color name="container_bg">#fff1f2</color>
     <color name="main_color">#e11d48</color>
