@@ -3,4 +3,11 @@
     <string name="icon_text">IF</string>
     <string name="welcome_message">Descubra seu perfil de saúde e receba recomendações personalizadas.</string>
     <string name="start_button">Comece aqui</string>
+    <string name="profile_form_title">Dados Pessoais</string>
+    <string name="profile_form_subtitle">Preencha suas informações para começar</string>
+    <string name="formNameTv">Nome completo</string>
+    <string name="profile_form_name_et">Digite seu nome</string>
+    <string name="form_age_tv">Idade</string>
+    <string name="form_sex_tv">Sexo</string>
+    <string name="form_age_et">24</string>
 </resources>
