@@ -26,7 +26,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/iconTextView"
+            android:id="@+id/mainIconTv"
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:background="@drawable/icon_box"
@@ -37,7 +37,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/titleTextView"
+            android:id="@+id/mainTitleTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -47,7 +47,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/subtitleTextView"
+            android:id="@+id/mainSubtitleTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -57,7 +57,7 @@
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/startButton"
+            android:id="@+id/mainStartBt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
