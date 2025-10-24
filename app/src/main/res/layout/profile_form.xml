@@ -251,7 +251,7 @@
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:backgroundTint="@color/screen_bg"
                     android:paddingVertical="12dp"
                     android:text="@string/form_return_bt"
