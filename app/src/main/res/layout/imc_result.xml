@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/screen_bg">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/container_box"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:translationZ="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintWidth_max="368dp">
+
+        <TextView
+            android:id="@+id/imcTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/imc_title_tv"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/imcSubtitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/imc_subtitle_tv"
+            android:textColor="@color/main_text_color"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/imcNameTv"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:padding="24dp"
+                android:gravity="center"
+                android:text="@string/imc_name_tv"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/main_text_color"
+                android:background="@drawable/container_box_alternative"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="96dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/container_box_alternative">
+
+                    <TextView
+                        android:id="@+id/imcResultLabelTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="@string/imc_result_label_tv"
+                        android:paddingStart="20sp"
+                        android:paddingEnd="20sp"
+                        android:layout_marginBottom="0dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/main_text_color" />
+
+                    <TextView
+                        android:id="@+id/imcResultValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:text="@string/imc_result_value_tv"
+                        android:paddingStart="20sp"
+                        android:paddingEnd="20sp"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="96dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_marginStart="3dp"
+                    android:background="@drawable/container_box_over_weight">
+
+                    <TextView
+                        android:id="@+id/imcCategoryLabelTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="@string/imc_category_label_tv"
+                        android:paddingStart="20sp"
+                        android:paddingEnd="20sp"
+                        android:layout_marginBottom="0dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/main_text_color" />
+
+                    <TextView
+                        android:id="@+id/imcCategoryValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:text="@string/imc_category_value_tv"
+                        android:paddingStart="20sp"
+                        android:paddingEnd="20sp"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/classificationTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/imc_classification_reference_title"
+                android:textColor="@color/main_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+
+                    <View
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:background="@drawable/circle_icon_under_weight" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/imc_classification_under_weight"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+
+                    <View
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:background="@drawable/circle_icon_normal_weight" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/imc_classification_normal_weight"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+
+                    <View
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:background="@drawable/circle_icon_over_weight" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/imc_classification_over_weight"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+
+                    <View
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:background="@drawable/circle_icon_obesity_weight" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/imc_classification_obesity_weight"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/imcReturnBt"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:backgroundTint="@color/screen_bg"
+                    android:paddingVertical="12dp"
+                    android:text="@string/imc_return_bt"
+                    android:textColor="@color/main_text_color"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/imcSubmitBt"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/main_color"
+                    android:paddingVertical="12dp"
+                    android:text="@string/imc_submit_bt"
+                    android:textColor="@color/white"
+                    app:cornerRadius="8dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
