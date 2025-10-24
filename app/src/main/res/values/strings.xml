@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">ImFitPlus</string>
+
     <string name="main_icon_tv">IF</string>
     <string name="main_subtitle_tv">Descubra seu perfil de saúde e receba recomendações personalizadas.</string>
     <string name="main_start_bt">Comece aqui</string>
+
     <string name="form_title_tv">Dados Pessoais</string>
     <string name="form_subtitle_tv">Preencha suas informações para começar</string>
     <string name="form_name_tv">Nome completo</string>
@@ -21,6 +23,7 @@
     <string name="form_intense_rb">Intenso (exercício 6-7 dias/semana)</string>
     <string name="form_submit_bt">Calcular IMC</string>
     <string name="form_return_bt">Voltar</string>
+
     <string name="imc_title_tv">Resultado do IMC</string>
     <string name="imc_subtitle_tv">Análise do seu Índice de Massa Corporal</string>
     <string name="imc_name_tv">Fulano da Silva</string>
@@ -35,4 +38,15 @@
     <string name="imc_classification_obesity_weight">Obesidade: &gt;= 30</string>
     <string name="imc_return_bt">Voltar</string>
     <string name="imc_submit_bt">Calcular Gasto Calórico</string>
+
+    <string name="caloric_title_tv">Gasto Calórico Diário</string>
+    <string name="caloric_subtitle_tv">Sua taxa metabólica e gasto total</string>
+    <string name="caloric_name_tv">Fulano da Silva</string>
+    <string name="caloric_tmb_label_tv">Taxa Metabólica Basal (TMB)</string>
+    <string name="caloric_tmb_value_tv">1650 kcal</string>
+    <string name="caloric_tmb_desc_tv">Calorias que seu corpo queima em repouso.</string>
+    <string name="caloric_total_label_tv">Gasto Calórico Diário Total</string>
+    <string name="caloric_total_value_tv">2550 kcal</string>
+    <string name="caloric_total_desc_tv">TMB ajustada pelo seu nível de atividade.</string>
+    <string name="caloric_submit_bt">Calcular Peso Ideal</string>
 </resources>
