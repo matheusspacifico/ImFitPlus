@@ -182,8 +182,96 @@
                         android:textSize="14sp"
                         android:hint="@string/form_weight_et"/>
 
-
                 </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:baselineAligned="false">
+
+                <TextView
+                    android:id="@+id/formActivityLevelTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/form_activity_level_tv"
+                    android:layout_marginTop="8dp"
+                    />
+
+
+                <RadioGroup
+                    android:id="@+id/formActivityLevelRg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/formSedentaryRb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/form_sedentary_rb"
+                        android:buttonTint="@color/main_color" />
+
+                    <RadioButton
+                        android:id="@+id/formLightRb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/form_light_rb"
+                        android:buttonTint="@color/main_color" />
+
+                    <RadioButton
+                        android:id="@+id/formModerateRb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/form_moderate_rb"
+                        android:buttonTint="@color/main_color" />
+
+                    <RadioButton
+                        android:id="@+id/formIntenseRb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/form_intense_rb"
+                        android:buttonTint="@color/main_color" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="?android:attr/buttonBarStyle"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <Button
+                    android:id="@+id/formReturnBt"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="12dp"
+                    android:text="@string/form_return_bt"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/screen_bg"
+                    app:cornerRadius="8dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/main_text_color" />
+
+                <Button
+                    android:id="@+id/formSubmitBt"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="12dp"
+                    android:text="@string/form_submit_bt"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/main_color"
+                    app:cornerRadius="8dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white" />
 
             </LinearLayout>
 
