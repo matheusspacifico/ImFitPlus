@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">ImFitPlus</string>
-    <string name="main_icon">IF</string>
-    <string name="main_message">Descubra seu perfil de saúde e receba recomendações personalizadas.</string>
-    <string name="main_button">Comece aqui</string>
-    <string name="form_title">Dados Pessoais</string>
-    <string name="form_subtitle">Preencha suas informações para começar</string>
+    <string name="main_icon_tv">IF</string>
+    <string name="main_subtitle_tv">Descubra seu perfil de saúde e receba recomendações personalizadas.</string>
+    <string name="main_start_bt">Comece aqui</string>
+    <string name="form_title_tv">Dados Pessoais</string>
+    <string name="form_subtitle_tv">Preencha suas informações para começar</string>
     <string name="form_name_tv">Nome completo</string>
     <string name="form_name_et">Digite seu nome</string>
     <string name="form_age_tv">Idade</string>
@@ -21,4 +21,11 @@
     <string name="form_intense_rb">Intenso (exercício 6-7 dias/semana)</string>
     <string name="form_submit_bt">Calcular IMC</string>
     <string name="form_return_bt">Voltar</string>
+    <string name="imc_title_tv">Resultado do IMC</string>
+    <string name="imc_subtitle_tv">Análise do seu Índice de Massa Corporal</string>
+    <string name="imc_name_tv">Fulano da Silva</string>
+    <string name="imc_result_label_tv">Seu IMC</string>
+    <string name="imc_result_value_tv">25.95</string>
+    <string name="imc_category_label_tv">Categoria</string>
+    <string name="imc_category_value_tv">Abaixo do peso</string>
 </resources>
