@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/profile_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/screen_bg">
-
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:orientation="vertical"
-        android:padding="24dp"
         android:background="@drawable/container_box"
         android:elevation="8dp"
+        android:orientation="vertical"
+        android:padding="24dp"
         android:translationZ="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintWidth_max="368dp">
 
         <TextView
             android:id="@+id/profileFormTitleTv"
@@ -52,8 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/form_name_tv"
-                android:textColor="@color/main_text_color"
-                />
+                android:textColor="@color/main_text_color" />
 
             <EditText
                 android:id="@+id/formNameEt"
@@ -62,20 +62,21 @@
                 android:autofillHints="textPersonName"
                 android:hint="@string/form_name_et"
                 android:inputType="textPersonName"
+                android:minHeight="48dp"
                 android:textSize="14sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:baselineAligned="false">
+                android:baselineAligned="false"
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginEnd="8dp">
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/formAgeTv"
@@ -83,26 +84,26 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="@string/form_age_tv"
-                        android:textColor="@color/main_text_color"
-                        />
+                        android:textColor="@color/main_text_color" />
 
                     <EditText
                         android:id="@+id/formAgeEt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:autofillHints="number"
+                        android:hint="@string/form_age_et"
                         android:inputType="number"
-                        android:textSize="14sp"
-                        android:hint="@string/form_age_et"/>
+                        android:minHeight="48dp"
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginStart="8dp">
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/formSexTv"
@@ -110,14 +111,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="@string/form_sex_tv"
-                        android:textColor="@color/main_text_color"
-                        />
+                        android:textColor="@color/main_text_color" />
 
                     <Spinner
                         android:id="@+id/formSexEt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:autofillHints="textPersonName"
+                        android:minHeight="48dp"
                         android:textSize="14sp" />
 
                 </LinearLayout>
@@ -127,15 +128,15 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:baselineAligned="false">
+                android:baselineAligned="false"
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginEnd="8dp">
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/formHeightTv"
@@ -143,26 +144,26 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="@string/form_height_tv"
-                        android:textColor="@color/main_text_color"
-                        />
+                        android:textColor="@color/main_text_color" />
 
                     <EditText
                         android:id="@+id/formHeightEt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:autofillHints="number"
+                        android:hint="@string/form_height_et"
                         android:inputType="number"
-                        android:textSize="14sp"
-                        android:hint="@string/form_height_et"/>
+                        android:minHeight="48dp"
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginStart="8dp">
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/formWeightTv"
@@ -170,17 +171,17 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="@string/form_weight_tv"
-                        android:textColor="@color/main_text_color"
-                        />
+                        android:textColor="@color/main_text_color" />
 
                     <EditText
                         android:id="@+id/formWeightEt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:autofillHints="number"
+                        android:hint="@string/form_weight_et"
                         android:inputType="number"
-                        android:textSize="14sp"
-                        android:hint="@string/form_weight_et"/>
+                        android:minHeight="48dp"
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
@@ -189,16 +190,15 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:baselineAligned="false">
+                android:baselineAligned="false"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/formActivityLevelTv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/form_activity_level_tv"
                     android:layout_marginTop="8dp"
-                    />
+                    android:text="@string/form_activity_level_tv" />
 
 
                 <RadioGroup
@@ -211,29 +211,29 @@
                         android:id="@+id/formSedentaryRb"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/form_sedentary_rb"
-                        android:buttonTint="@color/main_color" />
+                        android:buttonTint="@color/main_color"
+                        android:text="@string/form_sedentary_rb" />
 
                     <RadioButton
                         android:id="@+id/formLightRb"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/form_light_rb"
-                        android:buttonTint="@color/main_color" />
+                        android:buttonTint="@color/main_color"
+                        android:text="@string/form_light_rb" />
 
                     <RadioButton
                         android:id="@+id/formModerateRb"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/form_moderate_rb"
-                        android:buttonTint="@color/main_color" />
+                        android:buttonTint="@color/main_color"
+                        android:text="@string/form_moderate_rb" />
 
                     <RadioButton
                         android:id="@+id/formIntenseRb"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/form_intense_rb"
-                        android:buttonTint="@color/main_color" />
+                        android:buttonTint="@color/main_color"
+                        android:text="@string/form_intense_rb" />
 
                 </RadioGroup>
 
@@ -241,37 +241,37 @@
 
             <LinearLayout
                 style="?android:attr/buttonBarStyle"
-                android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:baselineAligned="false">
+                android:layout_marginTop="8dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/formReturnBt"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/screen_bg"
                     android:paddingVertical="12dp"
                     android:text="@string/form_return_bt"
                     android:textAllCaps="false"
-                    android:backgroundTint="@color/screen_bg"
-                    app:cornerRadius="8dp"
-                    android:layout_weight="1"
-                    android:textColor="@color/main_text_color" />
+                    android:textColor="@color/main_text_color"
+                    app:cornerRadius="8dp" />
 
                 <Button
                     android:id="@+id/formSubmitBt"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/main_color"
                     android:paddingVertical="12dp"
                     android:text="@string/form_submit_bt"
                     android:textAllCaps="false"
-                    android:backgroundTint="@color/main_color"
-                    app:cornerRadius="8dp"
-                    android:layout_weight="1"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    app:cornerRadius="8dp" />
 
             </LinearLayout>
 
