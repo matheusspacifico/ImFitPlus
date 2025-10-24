@@ -8,4 +8,14 @@
     <color name="container_bg">#fff1f2</color>
     <color name="main_color">#e11d48</color>
     <color name="main_text_color">#4c0519</color>
+
+    <color name="category_under_weight">#7dd3fc</color>
+    <color name="category_normal_weight">#22c55e</color>
+    <color name="category_over_weight">#fbbf24</color>
+    <color name="category_obesity_weight">#dc2626</color>
+
+    <color name="box_under_weight">#cffafe</color>
+    <color name="box_normal_weight">#dcfce7</color>
+    <color name="box_over_weight">#fef9c3</color>
+    <color name="box_obesity_weight">#fee2e2</color>
 </resources>
