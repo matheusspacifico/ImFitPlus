@@ -28,4 +28,11 @@
     <string name="imc_result_value_tv">25.95</string>
     <string name="imc_category_label_tv">Categoria</string>
     <string name="imc_category_value_tv">Abaixo do peso</string>
+    <string name="imc_classification_reference_title">Referência de classificação:</string>
+    <string name="imc_classification_under_weight">Abaixo do peso: &lt; 18.5</string>
+    <string name="imc_classification_normal_weight">Normal: 18.5 – 24.9</string>
+    <string name="imc_classification_over_weight">Sobrepeso: 25 – 29.9</string>
+    <string name="imc_classification_obesity_weight">Obesidade: &gt;= 30</string>
+    <string name="imc_return_bt">Voltar</string>
+    <string name="imc_submit_bt">Calcular Gasto Calórico</string>
 </resources>
