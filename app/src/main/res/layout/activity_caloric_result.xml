@@ -91,41 +91,41 @@
                 android:textSize="14sp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/container_box_normal_weight"
-            android:orientation="vertical"
-            android:padding="16dp">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/container_box_normal_weight"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="16dp">-->
 
-            <TextView
-                android:id="@+id/caloricTotalLabelTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/caloric_total_label_tv"
-                android:textColor="@color/main_text_color"
-                android:textSize="16sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/caloricTotalLabelTv"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/caloric_total_label_tv"-->
+<!--                android:textColor="@color/main_text_color"-->
+<!--                android:textSize="16sp" />-->
 
-            <TextView
-                android:id="@+id/caloricTotalValueTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/caloric_total_value_tv"
-                android:textColor="@android:color/black"
-                android:textSize="32sp"
-                android:textStyle="bold" />
+<!--            <TextView-->
+<!--                android:id="@+id/caloricTotalValueTv"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/caloric_total_value_tv"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:textSize="32sp"-->
+<!--                android:textStyle="bold" />-->
 
-            <TextView
-                android:id="@+id/caloricTotalDescTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/caloric_total_desc_tv"
-                android:textColor="@color/main_text_color"
-                android:textSize="14sp" />
-        </LinearLayout>
+<!--            <TextView-->
+<!--                android:id="@+id/caloricTotalDescTv"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/caloric_total_desc_tv"-->
+<!--                android:textColor="@color/main_text_color"-->
+<!--                android:textSize="14sp" />-->
+<!--        </LinearLayout>-->
 
         <LinearLayout
             style="?android:attr/buttonBarStyle"
