@@ -49,4 +49,18 @@
     <string name="caloric_total_value_tv">2550 kcal</string>
     <string name="caloric_total_desc_tv">TMB ajustada pelo seu nível de atividade.</string>
     <string name="caloric_submit_bt">Calcular Peso Ideal</string>
+
+    <string name="ideal_title_tv">Meta de Peso Ideal</string>
+    <string name="ideal_subtitle_tv">Recomendações para sua saúde</string>
+    <string name="ideal_weight_label">Seu Peso Ideal</string>
+    <string name="ideal_weight_value">63.5 kg</string>
+    <string name="ideal_diff_label">Diferença do Peso Atual</string>
+    <string name="ideal_diff_value">Você precisa perder 11.5 kg</string>
+    <string name="ideal_recommendations_cb">Exibir recomendações de saúde</string>
+    <string name="ideal_recommendations_content">Com base em seus dados, recomendamos focar em exercícios aeróbicos (corrida, ciclismo) 3–4x por semana e uma dieta balanceada rica em vegetais e proteínas magras.</string>
+    <string name="ideal_finish_bt">Finalizar</string>
+    <string name="ideal_return_bt">Voltar</string>
+    <string name="ideal_diff_normal">Você está no seu peso ideal. Parabéns!</string>
+    <string name="ideal_diff_lose">Você precisa perder %.1f kg para atingir seu peso ideal.</string>
+    <string name="ideal_diff_gain">Você precisa ganhar %.1f kg para atingir seu peso ideal.</string>
 </resources>
