@@ -26,16 +26,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_max="368dp">
 
-        <TextView
-            android:id="@+id/mainIconTv"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:background="@drawable/icon_box"
-            android:gravity="center"
-            android:text="@string/main_icon_tv"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/mainLogoIv"
+            android:layout_width="113dp"
+            android:layout_height="149dp"
+            android:background="@drawable/logo"
+            android:contentDescription="@string/main_logo_iv" />
 
         <TextView
             android:id="@+id/mainTitleTv"

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ImFitPlus</string>
 
-    <string name="main_icon_tv">IF</string>
+    <string name="main_logo_iv">ImFitPlus Logo</string>
     <string name="main_subtitle_tv">Descubra seu perfil de saúde e receba recomendações personalizadas.</string>
     <string name="main_start_bt">Comece aqui</string>
 
