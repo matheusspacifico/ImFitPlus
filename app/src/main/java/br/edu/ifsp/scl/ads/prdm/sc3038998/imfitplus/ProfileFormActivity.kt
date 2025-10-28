@@ -1,6 +1,7 @@
 package br.edu.ifsp.scl.ads.prdm.sc3038998.imfitplus
 
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioButton
@@ -20,7 +21,7 @@ class ProfileFormActivity : AppCompatActivity() {
     private lateinit var ageEt: EditText
     private lateinit var heightEt: EditText
     private lateinit var weightEt: EditText
-    private lateinit var sexSpinner: Spinner
+    private lateinit var sexSp: Spinner
     private lateinit var activityRg: RadioGroup
     private lateinit var sedentaryRb: RadioButton
     private lateinit var lightRb: RadioButton
@@ -42,7 +43,7 @@ class ProfileFormActivity : AppCompatActivity() {
         heightEt = apfb.formHeightEt
         weightEt = apfb.formWeightEt
 
-        sexSpinner = apfb.formSexEt
+        sexSp = apfb.formSexEt
 
         activityRg = apfb.formActivityLevelRg
         sedentaryRb = apfb.formSedentaryRb
@@ -53,7 +54,14 @@ class ProfileFormActivity : AppCompatActivity() {
         returnBt = apfb.formReturnBt
         submitBt = apfb.formSubmitBt
 
-
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.form_sex_sp,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            sexSp.adapter = adapter
+        }
 
     }
 }
