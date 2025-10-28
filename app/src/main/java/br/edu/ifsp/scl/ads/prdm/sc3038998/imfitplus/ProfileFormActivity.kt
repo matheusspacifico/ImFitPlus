@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Spinner
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.ifsp.scl.ads.prdm.sc3038998.imfitplus.databinding.ActivityProfileFormBinding
 import kotlin.math.pow
@@ -22,7 +23,6 @@ class ProfileFormActivity : AppCompatActivity() {
     private lateinit var heightEt: EditText
     private lateinit var weightEt: EditText
     private lateinit var sexSp: Spinner
-    private lateinit var activityRg: RadioGroup
     private lateinit var sedentaryRb: RadioButton
     private lateinit var lightRb: RadioButton
     private lateinit var moderateRb: RadioButton
@@ -32,6 +32,19 @@ class ProfileFormActivity : AppCompatActivity() {
 
     private fun calculateImc(weight: Float, height: Float): Float {
         return weight * height.pow(2)
+    }
+
+    private fun validateFields(): Boolean {
+        if (nameEt.text.isEmpty()) {
+            Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show()
+            return false
+        }
+
+        return true
+    }
+
+    private fun submitForm() {
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,7 +58,6 @@ class ProfileFormActivity : AppCompatActivity() {
 
         sexSp = apfb.formSexEt
 
-        activityRg = apfb.formActivityLevelRg
         sedentaryRb = apfb.formSedentaryRb
         lightRb = apfb.formLightRb
         moderateRb = apfb.formModerateRb
@@ -63,5 +75,7 @@ class ProfileFormActivity : AppCompatActivity() {
             sexSp.adapter = adapter
         }
 
+        returnBt.setOnClickListener { finish() }
+        submitBt
     }
 }
