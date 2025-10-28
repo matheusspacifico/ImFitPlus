@@ -24,6 +24,11 @@
     <string name="form_submit_bt">Calcular IMC</string>
     <string name="form_return_bt">Voltar</string>
 
+    <string-array name="form_sex_sp">
+        <item>Masculino</item>
+        <item>Feminino</item>
+    </string-array>
+
     <string name="imc_title_tv">Resultado do IMC</string>
     <string name="imc_subtitle_tv">Análise do seu Índice de Massa Corporal</string>
     <string name="imc_name_tv">Fulano da Silva</string>
