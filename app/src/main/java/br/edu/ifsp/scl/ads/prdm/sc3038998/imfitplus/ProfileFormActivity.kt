@@ -1,5 +1,6 @@
 package br.edu.ifsp.scl.ads.prdm.sc3038998.imfitplus
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -23,6 +24,7 @@ class ProfileFormActivity : AppCompatActivity() {
     private lateinit var heightEt: EditText
     private lateinit var weightEt: EditText
     private lateinit var sexSp: Spinner
+    private lateinit var activityLevelRg: RadioGroup
     private lateinit var sedentaryRb: RadioButton
     private lateinit var lightRb: RadioButton
     private lateinit var moderateRb: RadioButton
@@ -30,13 +32,54 @@ class ProfileFormActivity : AppCompatActivity() {
     private lateinit var returnBt: Button
     private lateinit var submitBt: Button
 
-    private fun calculateImc(weight: Float, height: Float): Float {
+    private fun calculateImc(weight: Double, height: Double): Double {
+        if (height == 0.0) {
+            return 0.0
+        }
         return weight * height.pow(2)
     }
 
     private fun validateFields(): Boolean {
         if (nameEt.text.isEmpty()) {
             Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show()
+            return false
+        }
+
+        if (ageEt.text.isEmpty()) {
+            Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show()
+            return false
+        }
+
+        if (heightEt.text.isEmpty()) {
+            Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show()
+            return false
+        }
+
+        if (weightEt.text.isEmpty()) {
+            Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show()
+            return false
+        }
+
+        val age = ageEt.text.toString().toIntOrNull()
+        if (age == null || age <= 0) {
+            Toast.makeText(this, "Insira uma idade válida!", Toast.LENGTH_SHORT).show()
+            return false
+        }
+
+        val height = heightEt.text.toString().toDoubleOrNull()
+        if (height == null || height <= 0.0) {
+            Toast.makeText(this, "Insira uma altura válida!", Toast.LENGTH_SHORT).show()
+            return false
+        }
+
+        val weight = weightEt.text.toString().toDoubleOrNull()
+        if (weight == null || weight <= 0.0) {
+            Toast.makeText(this, "Insira um peso válida!", Toast.LENGTH_SHORT).show()
+            return false
+        }
+
+        if (activityLevelRg.checkedRadioButtonId == -1) {
+            Toast.makeText(this, "Selecione um nível de atividade física!", Toast.LENGTH_SHORT).show()
             return false
         }
 
@@ -58,6 +101,8 @@ class ProfileFormActivity : AppCompatActivity() {
 
         sexSp = apfb.formSexEt
 
+        activityLevelRg = apfb.formActivityLevelRg
+
         sedentaryRb = apfb.formSedentaryRb
         lightRb = apfb.formLightRb
         moderateRb = apfb.formModerateRb
@@ -76,6 +121,6 @@ class ProfileFormActivity : AppCompatActivity() {
         }
 
         returnBt.setOnClickListener { finish() }
-        submitBt
+        submitBt.setOnClickListener { submitForm() }
     }
 }
