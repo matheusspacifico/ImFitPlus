@@ -25,10 +25,6 @@ class ProfileFormActivity : AppCompatActivity() {
     private lateinit var weightEt: EditText
     private lateinit var sexSp: Spinner
     private lateinit var activityLevelRg: RadioGroup
-    private lateinit var sedentaryRb: RadioButton
-    private lateinit var lightRb: RadioButton
-    private lateinit var moderateRb: RadioButton
-    private lateinit var intenseRb: RadioButton
     private lateinit var returnBt: Button
     private lateinit var submitBt: Button
 
@@ -87,7 +83,26 @@ class ProfileFormActivity : AppCompatActivity() {
     }
 
     private fun submitForm() {
+        if (!validateFields()) return
 
+        val name = nameEt.text.toString()
+        val age = ageEt.text.toString().toInt()
+        val height = heightEt.text.toString().toDouble()
+        val weight = weightEt.text.toString().toDouble()
+        val sex = sexSp.selectedItem.toString()
+        val activityLevel = activityLevelRg.checkedRadioButtonId
+        val imc = calculateImc(weight, height)
+
+        val intent = Intent(this, ImcResultActivity::class.java)
+        intent.putExtra("EXTRA_NAME", name)
+        intent.putExtra("EXTRA_AGE", age)
+        intent.putExtra("EXTRA_HEIGHT", height)
+        intent.putExtra("EXTRA_WEIGHT", weight)
+        intent.putExtra("EXTRA_SEX", sex)
+        intent.putExtra("EXTRA_ACTIVITY_LEVEL", activityLevel)
+        intent.putExtra("EXTRA_IMC", imc)
+
+        startActivity(intent)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -102,11 +117,6 @@ class ProfileFormActivity : AppCompatActivity() {
         sexSp = apfb.formSexEt
 
         activityLevelRg = apfb.formActivityLevelRg
-
-        sedentaryRb = apfb.formSedentaryRb
-        lightRb = apfb.formLightRb
-        moderateRb = apfb.formModerateRb
-        intenseRb = apfb.formIntenseRb
 
         returnBt = apfb.formReturnBt
         submitBt = apfb.formSubmitBt
