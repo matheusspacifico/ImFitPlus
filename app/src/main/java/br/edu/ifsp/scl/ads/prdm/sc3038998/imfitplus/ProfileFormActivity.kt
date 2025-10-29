@@ -32,7 +32,7 @@ class ProfileFormActivity : AppCompatActivity() {
         if (height == 0.0) {
             return 0.0
         }
-        return weight * height.pow(2)
+        return weight / height.pow(2)
     }
 
     private fun validateFields(): Boolean {
