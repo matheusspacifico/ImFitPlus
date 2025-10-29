@@ -90,8 +90,16 @@ class ProfileFormActivity : AppCompatActivity() {
         val height = heightEt.text.toString().toDouble()
         val weight = weightEt.text.toString().toDouble()
         val sex = sexSp.selectedItem.toString()
-        val activityLevel = activityLevelRg.checkedRadioButtonId
+
         val imc = calculateImc(weight, height)
+
+        val activityLevel = when (activityLevelRg.checkedRadioButtonId) {
+            apfb.formSedentaryRb.id -> apfb.formSedentaryRb.text.toString()
+            apfb.formLightRb.id -> apfb.formLightRb.text.toString()
+            apfb.formModerateRb.id -> apfb.formModerateRb.text.toString()
+            apfb.formIntenseRb.id -> apfb.formIntenseRb.text.toString()
+            else -> ""
+        }
 
         val intent = Intent(this, ImcResultActivity::class.java)
         intent.putExtra("EXTRA_NAME", name)
