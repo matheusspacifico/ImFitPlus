@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
-import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Spinner
 import android.widget.Toast
@@ -82,7 +81,7 @@ class ProfileFormActivity : AppCompatActivity() {
         return true
     }
 
-    private fun submitForm() {
+    private fun advance() {
         if (!validateFields()) return
 
         val name = nameEt.text.toString()
@@ -139,6 +138,6 @@ class ProfileFormActivity : AppCompatActivity() {
         }
 
         returnBt.setOnClickListener { finish() }
-        submitBt.setOnClickListener { submitForm() }
+        submitBt.setOnClickListener { advance() }
     }
 }
