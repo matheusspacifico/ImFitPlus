@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.ifsp.scl.ads.prdm.sc3038998.imfitplus.databinding.ActivityCaloricResultBinding
+import java.util.Locale
 
 class CaloricResultActivity : AppCompatActivity() {
 
@@ -47,7 +48,7 @@ class CaloricResultActivity : AppCompatActivity() {
         val tmb = calculateTmb(sex ?: "Masculino", weight, height, age)
 
         nameTv.text = name
-        resultTv.text = tmb.toString()
+        resultTv.text = String.format(Locale.US, "%.2f", tmb)
 
         returnBt.setOnClickListener { finish() }
         submitBt.setOnClickListener {
