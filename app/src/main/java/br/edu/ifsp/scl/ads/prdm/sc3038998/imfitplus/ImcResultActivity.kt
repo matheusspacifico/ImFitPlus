@@ -49,6 +49,7 @@ class ImcResultActivity : AppCompatActivity() {
         intentCR.putExtra("EXTRA_SEX", sex)
         intentCR.putExtra("EXTRA_ACTIVITY_LEVEL", activityLevel)
         intentCR.putExtra("EXTRA_IMC", imc)
+        intentCR.putExtra("EXTRA_CATEGORY", category)
 
         startActivity(intentCR)
     }
