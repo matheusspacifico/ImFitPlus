@@ -32,7 +32,18 @@ class IdealWeightActivity : AppCompatActivity() {
         return weight - idealWeight
     }
 
-    private fun advance() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(aiwb.root)
+
+        resultTv = aiwb.idealWeightValueTv
+        diffTv = aiwb.idealDiffValueTv
+        recommendationCb = aiwb.idealRecommendationsCb
+        recommendationTv = aiwb.idealRecommendationsTv
+
+        returnBt = aiwb.idealReturnBt
+        submitBt = aiwb.idealFinishBt
+
         val name = intent.getStringExtra("EXTRA_NAME")
         val age = intent.getIntExtra("EXTRA_AGE", 0)
         val height = intent.getDoubleExtra("EXTRA_HEIGHT", 0.0)
@@ -64,26 +75,12 @@ class IdealWeightActivity : AppCompatActivity() {
             }
         }
 
-        val intentM = Intent(this, MainActivity::class.java)
-        intentM.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
-        startActivity(intentM)
-        finish()
-    }
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(aiwb.root)
-
-        resultTv = aiwb.idealWeightValueTv
-        diffTv = aiwb.idealDiffValueTv
-        recommendationCb = aiwb.idealRecommendationsCb
-        recommendationTv = aiwb.idealRecommendationsTv
-
-        returnBt = aiwb.idealReturnBt
-        submitBt = aiwb.idealFinishBt
-
         returnBt.setOnClickListener { finish() }
-        submitBt.setOnClickListener { advance() }
+        submitBt.setOnClickListener {
+            val intentM = Intent(this, MainActivity::class.java)
+            intentM.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            startActivity(intentM)
+            finish()
+        }
     }
 }

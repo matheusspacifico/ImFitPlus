@@ -26,7 +26,17 @@ class ImcResultActivity : AppCompatActivity() {
         return "Abaixo do peso"
     }
 
-    private fun advance() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(airb.root)
+
+        nameTv = airb.imcNameTv
+        resultTv = airb.imcResultValueTv
+        categoryTv = airb.imcCategoryValueTv
+
+        returnBt = airb.imcReturnBt
+        submitBt = airb.imcSubmitBt
+
         val name = intent.getStringExtra("EXTRA_NAME")
         val age = intent.getIntExtra("EXTRA_AGE", 0)
         val height = intent.getDoubleExtra("EXTRA_HEIGHT", 0.0)
@@ -41,31 +51,19 @@ class ImcResultActivity : AppCompatActivity() {
         resultTv.text = imc.toString()
         categoryTv.text = category
 
-        val intentCR = Intent(this, CaloricResultActivity::class.java)
-        intentCR.putExtra("EXTRA_NAME", name)
-        intentCR.putExtra("EXTRA_AGE", age)
-        intentCR.putExtra("EXTRA_HEIGHT", height)
-        intentCR.putExtra("EXTRA_WEIGHT", weight)
-        intentCR.putExtra("EXTRA_SEX", sex)
-        intentCR.putExtra("EXTRA_ACTIVITY_LEVEL", activityLevel)
-        intentCR.putExtra("EXTRA_IMC", imc)
-        intentCR.putExtra("EXTRA_CATEGORY", category)
-
-        startActivity(intentCR)
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(airb.root)
-
-        nameTv = airb.imcNameTv
-        resultTv = airb.imcResultValueTv
-        categoryTv = airb.imcCategoryValueTv
-
-        returnBt = airb.imcReturnBt
-        submitBt = airb.imcSubmitBt
-
         returnBt.setOnClickListener { finish() }
-        submitBt.setOnClickListener { advance() }
+        submitBt.setOnClickListener {
+            val intentCR = Intent(this, CaloricResultActivity::class.java)
+            intentCR.putExtra("EXTRA_NAME", name)
+            intentCR.putExtra("EXTRA_AGE", age)
+            intentCR.putExtra("EXTRA_HEIGHT", height)
+            intentCR.putExtra("EXTRA_WEIGHT", weight)
+            intentCR.putExtra("EXTRA_SEX", sex)
+            intentCR.putExtra("EXTRA_ACTIVITY_LEVEL", activityLevel)
+            intentCR.putExtra("EXTRA_IMC", imc)
+            intentCR.putExtra("EXTRA_CATEGORY", category)
+
+            startActivity(intentCR)
+        }
     }
 }
