@@ -21,7 +21,6 @@ class IdealWeightActivity : AppCompatActivity() {
     private lateinit var resultTv: TextView
     private lateinit var diffTv: TextView
     private lateinit var recommendationCb: CheckBox
-    private lateinit var recommendationTv: TextView
     private lateinit var returnBt: Button
     private lateinit var submitBt: Button
 
@@ -40,7 +39,6 @@ class IdealWeightActivity : AppCompatActivity() {
         resultTv = aiwb.idealWeightValueTv
         diffTv = aiwb.idealDiffValueTv
         recommendationCb = aiwb.idealRecommendationsCb
-        recommendationTv = aiwb.idealRecommendationsTv
 
         returnBt = aiwb.idealReturnBt
         submitBt = aiwb.idealFinishBt
@@ -70,9 +68,9 @@ class IdealWeightActivity : AppCompatActivity() {
 
         recommendationCb.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
-                recommendationTv.visibility = View.VISIBLE
+                aiwb.idealRecommendationsLayout.visibility = View.VISIBLE
             } else {
-                recommendationTv.visibility = View.GONE
+                aiwb.idealRecommendationsLayout.visibility = View.GONE
             }
         }
 
