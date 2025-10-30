@@ -8,6 +8,7 @@ import android.widget.CheckBox
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.ifsp.scl.ads.prdm.sc3038998.imfitplus.databinding.ActivityIdealWeightBinding
+import java.util.Locale
 import kotlin.math.abs
 import kotlin.math.pow
 
@@ -57,7 +58,7 @@ class IdealWeightActivity : AppCompatActivity() {
         val idealWeight = calculateIdealWeight(height)
         val diffWeight = getDiff(weight, idealWeight)
 
-        resultTv.text = idealWeight.toString()
+        resultTv.text = String.format(Locale.US, "%.1f", idealWeight)
 
         if (abs(diffWeight) < 1) {
             diffTv.text = getString(R.string.ideal_diff_normal)
