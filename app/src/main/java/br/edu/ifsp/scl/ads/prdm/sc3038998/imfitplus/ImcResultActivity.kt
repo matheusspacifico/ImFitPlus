@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.ifsp.scl.ads.prdm.sc3038998.imfitplus.databinding.ActivityImcResultBinding
+import java.util.Locale
 
 class ImcResultActivity : AppCompatActivity() {
 
@@ -48,7 +49,7 @@ class ImcResultActivity : AppCompatActivity() {
         val category = calculateCategory(imc)
 
         nameTv.text = name
-        resultTv.text = imc.toString()
+        resultTv.text = String.format(Locale.US, "%.2f", imc)
         categoryTv.text = category
 
         returnBt.setOnClickListener { finish() }
