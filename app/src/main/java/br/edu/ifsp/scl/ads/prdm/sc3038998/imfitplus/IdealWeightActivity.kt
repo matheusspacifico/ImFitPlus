@@ -76,10 +76,23 @@ class IdealWeightActivity : AppCompatActivity() {
 
         returnBt.setOnClickListener { finish() }
         submitBt.setOnClickListener {
-            val intentM = Intent(this, MainActivity::class.java)
-            intentM.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
-            startActivity(intentM)
-            finish()
+//            val intentM = Intent(this, MainActivity::class.java)
+//            intentM.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+//            startActivity(intentM)
+//            finish()
+            val intentS = Intent(this, SummaryActivity::class.java)
+            intentS.putExtra("EXTRA_NAME", name)
+            intentS.putExtra("EXTRA_AGE", age)
+            intentS.putExtra("EXTRA_HEIGHT", height)
+            intentS.putExtra("EXTRA_WEIGHT", weight)
+            intentS.putExtra("EXTRA_SEX", sex)
+            intentS.putExtra("EXTRA_ACTIVITY_LEVEL", activityLevel)
+            intentS.putExtra("EXTRA_IMC", imc)
+            intentS.putExtra("EXTRA_CATEGORY", category)
+            intentS.putExtra("EXTRA_TMB", tmb)
+            intentS.putExtra("EXTRA_IDEAL", idealWeight)
+
+            startActivity(intentS)
         }
     }
 }

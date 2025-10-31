@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/container_box"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:translationZ="8dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_max="368dp">
+
+        <TextView
+            android:id="@+id/summaryTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/summary_title_tv"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/summarySubtitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/summary_subtitle_tv"
+            android:textColor="@color/main_text_color"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/summaryNameTv"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/container_box_alternative"
+                android:gravity="center"
+                android:padding="24dp"
+                android:text="@string/summary_name_tv"
+                android:textColor="@color/main_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/container_box_alternative"
+                    android:minHeight="96dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/summaryImcLabelTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="center"
+                        android:paddingStart="20sp"
+                        android:paddingEnd="20sp"
+                        android:text="@string/imc_result_label_tv"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/summaryImcValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:paddingStart="20sp"
+                        android:paddingEnd="20sp"
+                        android:text="@string/imc_result_value_tv"
+                        android:textColor="@color/black"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/container_box_over_weight"
+                    android:minHeight="96dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/summaryCategoryLabelTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="center"
+                        android:paddingStart="20sp"
+                        android:paddingEnd="20sp"
+                        android:text="@string/imc_category_label_tv"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/summaryCategoryValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:paddingStart="20sp"
+                        android:paddingEnd="20sp"
+                        android:text="@string/imc_category_value_tv"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/container_box_alternative"
+                    android:minHeight="96dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/summaryIdealLabelTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="center"
+                        android:paddingStart="20sp"
+                        android:paddingEnd="20sp"
+                        android:text="@string/summary_ideal_tv"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/summaryIdealValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:paddingStart="20sp"
+                        android:paddingEnd="20sp"
+                        android:text="@string/summary_ideal_result_tv"
+                        android:textColor="@color/black"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/container_box_over_weight"
+                    android:minHeight="96dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/summaryCaloricLabelTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="center"
+                        android:paddingStart="20sp"
+                        android:paddingEnd="20sp"
+                        android:text="@string/summary_tmb_tv"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/summaryCaloricValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:paddingStart="20sp"
+                        android:paddingEnd="20sp"
+                        android:text="@string/summary_tmb_result_tv"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/summaryWaterTv"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/container_box_alternative"
+            android:gravity="center"
+            android:padding="24dp"
+            android:text="@string/summary_water_tv"
+            android:textColor="@color/main_text_color"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/summaryReturnBt"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:backgroundTint="@color/screen_bg"
+                android:paddingVertical="12dp"
+                android:text="@string/summary_return_bt"
+                android:textColor="@color/main_text_color"
+                app:cornerRadius="8dp" />
+
+            <Button
+                android:id="@+id/summarySubmitBt"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/main_color"
+                android:paddingVertical="12dp"
+                android:text="@string/summary_finish_bt"
+                android:textColor="@color/white"
+                app:cornerRadius="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

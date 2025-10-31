@@ -63,9 +63,20 @@
     <string name="ideal_diff_value">Você precisa perder 11.5 kg</string>
     <string name="ideal_recommendations_cb">Exibir recomendações de saúde</string>
     <string name="ideal_recommendations_content">Com base em seus dados, recomendamos focar em exercícios aeróbicos (corrida, ciclismo) 3–4x por semana e uma dieta balanceada rica em vegetais e proteínas magras.</string>
-    <string name="ideal_finish_bt">Finalizar</string>
+    <string name="ideal_finish_bt">Ir para o Resumo</string>
     <string name="ideal_return_bt">Voltar</string>
     <string name="ideal_diff_normal">Você está no seu peso ideal. Parabéns!</string>
     <string name="ideal_diff_lose">Você precisa perder %.1f kg para atingir seu peso ideal.</string>
     <string name="ideal_diff_gain">Você precisa ganhar %.1f kg para atingir seu peso ideal.</string>
+
+    <string name="summary_title_tv">Resumo da Saúde</string>
+    <string name="summary_subtitle_tv">Resumo do perfil de saúde</string>
+    <string name="summary_name_tv">Fulano da Silva</string>
+    <string name="summary_ideal_tv">Peso Ideal</string>
+    <string name="summary_ideal_result_tv">72kg</string>
+    <string name="summary_tmb_tv">TMB</string>
+    <string name="summary_tmb_result_tv">1870</string>
+    <string name="summary_water_tv">Ingerir 350ml de água</string>
+    <string name="summary_return_bt">Voltar</string>
+    <string name="summary_finish_bt">Finalizar</string>
 </resources>
