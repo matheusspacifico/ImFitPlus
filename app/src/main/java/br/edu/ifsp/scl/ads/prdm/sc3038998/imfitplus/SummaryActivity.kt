@@ -6,8 +6,13 @@ import android.os.PersistableBundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import br.edu.ifsp.scl.ads.prdm.sc3038998.imfitplus.databinding.ActivitySummaryBinding
+import br.edu.ifsp.scl.ads.prdm.sc3038998.imfitplus.entity.User
+import br.edu.ifsp.scl.ads.prdm.sc3038998.imfitplus.entity.UserCalculationRecord
+import br.edu.ifsp.scl.ads.prdm.sc3038998.imfitplus.persistence.AppDatabase
 import java.util.Locale
+import kotlinx.coroutines.launch
 
 class SummaryActivity : AppCompatActivity() {
 
@@ -26,6 +31,51 @@ class SummaryActivity : AppCompatActivity() {
 
     private fun calculateWater(weight: Double): Double {
         return weight * 350
+    }
+
+    private fun saveToDatabase(
+        name: String,
+        age: Int,
+        height: Double,
+        weight: Double,
+        sex: String,
+        activityLevel: String,
+        imc: Double,
+        category: String,
+        tmb: Double,
+        ideal: Double
+    ) {
+        lifecycleScope.launch {
+            val db = AppDatabase.getDatabase(applicationContext)
+            val userDao = db.userDao()
+            val userCalculationRecordDao = db.userCalculationRecordDao()
+
+            val user = User(
+                name = name,
+                age = age,
+                height = height,
+                weight = weight,
+                activityLevel = activityLevel
+            )
+
+            val userId = userDao.insertUser(user)
+
+            val record = UserCalculationRecord(
+                userId = userId,
+                name = name,
+                age = age,
+                sex = sex,
+                height = height,
+                weight = weight,
+                activityLevel = activityLevel,
+                imc = imc,
+                imcCategory = category,
+                tmb = tmb,
+                idealWeight = ideal
+            )
+
+            userCalculationRecordDao.insertUserCalculationRecord(record)
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
