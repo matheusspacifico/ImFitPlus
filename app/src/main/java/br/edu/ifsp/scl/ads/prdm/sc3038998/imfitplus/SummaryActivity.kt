@@ -119,6 +119,19 @@ class SummaryActivity : AppCompatActivity() {
 
         returnBt.setOnClickListener { finish() }
         submitBt.setOnClickListener {
+            saveToDatabase(
+                name ?: "",
+                age,
+                height,
+                weight,
+                sex ?: "",
+                activityLevel ?: "",
+                imc,
+                category ?: "",
+                tmb,
+                ideal
+            )
+
             val intentM = Intent(this, MainActivity::class.java)
             intentM.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
             startActivity(intentM)
