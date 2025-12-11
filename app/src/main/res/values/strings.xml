@@ -4,6 +4,7 @@
     <string name="main_logo_iv">ImFitPlus Logo</string>
     <string name="main_subtitle_tv">Descubra seu perfil de saúde e receba recomendações personalizadas.</string>
     <string name="main_start_bt">Comece aqui</string>
+    <string name="main_history_button">Ver Histórico</string>
 
     <string name="form_title_tv">Dados Pessoais</string>
     <string name="form_subtitle_tv">Preencha suas informações para começar</string>
