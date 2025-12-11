@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.edu.ifsp.scl.ads.prdm.sc3038998.imfitplus.databinding.ActivityHistoryBinding
 import br.edu.ifsp.scl.ads.prdm.sc3038998.imfitplus.persistence.AppDatabase
@@ -27,6 +28,7 @@ class HistoryActivity : AppCompatActivity() {
         returnBt = ahb.historyReturnBt
 
         historyAdapter = HistoryAdapter()
+        historyRv.layoutManager = LinearLayoutManager(this)
         historyRv.adapter = historyAdapter
 
         returnBt.setOnClickListener { finish() }
