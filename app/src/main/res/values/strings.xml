@@ -84,4 +84,13 @@
     <string name="history_title_tv">Histórico de Cálculos</string>
     <string name="history_subtitle_tv">Veja todos os cálculos realizados anteriormente</string>
     <string name="history_return_bt">Voltar</string>
+
+    <string name="item_history_name_tv">Nome do Usuário</string>
+    <string name="item_history_timestamp_tv">01/01/2025 10:00</string>
+    <string name="item_history_info_tv">25 anos • Masculino • 75.0 kg • 1.75 m</string>
+    <string name="item_history_imc_tv">IMC: 24.49</string>
+    <string name="item_history_category_tv">Normal</string>
+    <string name="item_history_tmb_tv">TMB: 1750.00 kcal</string>
+    <string name="item_history_ideal_tv">Peso Ideal: 67.4 kg</string>
+
 </resources>
