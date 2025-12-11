@@ -12,7 +12,8 @@ import br.edu.ifsp.scl.ads.prdm.sc3038998.imfitplus.entity.UserCalculationRecord
 
 @Database(
     entities = [User::class, UserCalculationRecord::class],
-    version = 1
+    version = 1,
+    exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
 
