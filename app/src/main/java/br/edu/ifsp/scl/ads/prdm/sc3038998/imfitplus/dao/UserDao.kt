@@ -1,9 +1,11 @@
 package br.edu.ifsp.scl.ads.prdm.sc3038998.imfitplus.dao
 
+import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import br.edu.ifsp.scl.ads.prdm.sc3038998.imfitplus.entity.User
 
+@Dao
 interface UserDao {
 
     @Query("SELECT * FROM users")
