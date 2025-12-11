@@ -79,4 +79,8 @@
     <string name="summary_water_tv">Ingerir 350ml de água</string>
     <string name="summary_return_bt">Voltar</string>
     <string name="summary_finish_bt">Finalizar</string>
+
+    <string name="history_title_tv">Histórico de Cálculos</string>
+    <string name="history_subtitle_tv">Veja todos os cálculos realizados anteriormente</string>
+    <string name="history_return_bt">Voltar</string>
 </resources>
