@@ -64,6 +64,18 @@
             android:backgroundTint="@color/main_color"
             app:cornerRadius="8dp" />
 
+        <Button
+            android:id="@+id/mainHistoryBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:paddingVertical="12dp"
+            android:text="@string/main_history_button"
+            android:backgroundTint="@color/screen_bg"
+            android:textColor="@color/main_text_color"
+            app:cornerRadius="8dp" />
+
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
