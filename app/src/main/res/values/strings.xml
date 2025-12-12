@@ -10,9 +10,9 @@
     <string name="form_subtitle_tv">Preencha suas informações para começar</string>
     <string name="form_name_tv">Nome completo</string>
     <string name="form_name_et">Digite seu nome</string>
-    <string name="form_age_tv">Idade</string>
+    <string name="form_age_tv">Data de Nascimento</string>
     <string name="form_sex_tv">Sexo</string>
-    <string name="form_age_et">24</string>
+    <string name="form_age_et">21/04/2001</string>
     <string name="form_height_tv">Altura (m)</string>
     <string name="form_height_et">1.70</string>
     <string name="form_weight_tv">Peso (kg)</string>
@@ -87,10 +87,23 @@
 
     <string name="item_history_name_tv">Nome do Usuário</string>
     <string name="item_history_timestamp_tv">01/01/2025 10:00</string>
-    <string name="item_history_info_tv">25 anos • Masculino • 75.0 kg • 1.75 m</string>
+    <string name="item_history_info_tv">11/04/2001 • 25 anos • Masculino • 75.0 kg • 1.75 m</string>
     <string name="item_history_imc_tv">IMC: 24.49</string>
     <string name="item_history_category_tv">Normal</string>
     <string name="item_history_tmb_tv">TMB: 1750.00 kcal</string>
     <string name="item_history_ideal_tv">Peso Ideal: 67.4 kg</string>
+    <string name="summary_frequency_max">Frequência Max.</string>
+    <string name="summary_heart_max_value">160</string>
+    <string name="summary_zone_label_tv">Zonas</string>
+    <string name="summary_zone_value_tv">Leve</string>
+    <string name="queima">Queima</string>
+    <string name="aerobica">Aerobica</string>
+    <string name="anaerobica">Anaerobica</string>
+    <string name="zonas">Zonas:</string>
+    <string name="leve_110">Leve: 110 - 130</string>
+    <string name="queima_130">Queima: 130 - 140</string>
+    <string name="aerobica_140">Aerobica: 140 - 150</string>
+    <string name="anaerobica_150">Anaerobica: 150 - 160</string>
+    <string name="frequ_ncia_max_160">Frequência Max: 160</string>
 
 </resources>

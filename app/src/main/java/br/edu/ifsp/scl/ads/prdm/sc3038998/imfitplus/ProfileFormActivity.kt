@@ -55,12 +55,6 @@ class ProfileFormActivity : AppCompatActivity() {
             return false
         }
 
-        val age = ageEt.text.toString().toIntOrNull()
-        if (age == null || age <= 0) {
-            Toast.makeText(this, "Insira uma idade válida!", Toast.LENGTH_SHORT).show()
-            return false
-        }
-
         val height = heightEt.text.toString().toDoubleOrNull()
         if (height == null || height <= 0.0) {
             Toast.makeText(this, "Insira uma altura válida!", Toast.LENGTH_SHORT).show()
@@ -85,7 +79,7 @@ class ProfileFormActivity : AppCompatActivity() {
         if (!validateFields()) return
 
         val name = nameEt.text.toString()
-        val age = ageEt.text.toString().toInt()
+        val age = ageEt.text.toString()
         val height = heightEt.text.toString().toDouble()
         val weight = weightEt.text.toString().toDouble()
         val sex = sexSp.selectedItem.toString()

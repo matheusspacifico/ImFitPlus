@@ -48,6 +48,10 @@ class HistoryAdapter : RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>() 
         private val tmbTv: TextView = itemView.findViewById(R.id.itemTmbTv)
         private val idealTv: TextView = itemView.findViewById(R.id.itemIdealTv)
         private val detailsTv: TextView = itemView.findViewById(R.id.itemDetailsTv)
+        private val leveTv: TextView = itemView.findViewById(R.id.itemLeveTv)
+        private val queimaTv: TextView = itemView.findViewById(R.id.itemQueimaTv)
+        private val aerobicaTv: TextView = itemView.findViewById(R.id.itemAerobicaTv)
+        private val anaerobicaTv: TextView = itemView.findViewById(R.id.itemAnaerobicaTv)
 
         fun bind(record: UserCalculationRecord) {
             nameTv.text = record.name
@@ -63,7 +67,14 @@ class HistoryAdapter : RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>() 
             tmbTv.text = String.format(Locale.US, "TMB: %.2f kcal", record.tmb)
             idealTv.text = String.format(Locale.US, "Peso Ideal: %.1f kg", record.idealWeight)
 
+            leveTv.text = record.leve
+            queimaTv.text = record.queima
+            aerobicaTv.text = record.aerobica
+            anaerobicaTv.text = record.anerobica
+
             detailsTv.text = buildString {
+                append(record.birthdate)
+                append(" • ")
                 append(record.age)
                 append(" anos • ")
                 append(record.sex)

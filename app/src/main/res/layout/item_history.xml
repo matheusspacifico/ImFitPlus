@@ -53,7 +53,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:baselineAligned="false"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -102,6 +103,84 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:text="@string/item_history_ideal_tv"
+                android:textColor="@color/main_text_color"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/itemMaxTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/frequ_ncia_max_160"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/itemZonaTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/zonas"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/itemLeveTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/leve_110"
+                android:textColor="@color/main_text_color"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/itemQueimaTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/queima_130"
+                android:textColor="@color/main_text_color"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/itemAerobicaTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/aerobica_140"
+                android:textColor="@color/main_text_color"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/itemAnaerobicaTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/anaerobica_150"
                 android:textColor="@color/main_text_color"
                 android:textSize="12sp" />
 

@@ -89,9 +89,9 @@
                         android:id="@+id/formAgeEt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:autofillHints="number"
+                        android:autofillHints="date"
                         android:hint="@string/form_age_et"
-                        android:inputType="number"
+                        android:inputType="date"
                         android:minHeight="48dp"
                         android:textSize="14sp" />
 

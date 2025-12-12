@@ -47,8 +47,8 @@
 
             <TextView
                 android:id="@+id/summaryNameTv"
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
+                android:layout_width="250dp"
+                android:layout_height="25dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/container_box_alternative"
@@ -148,7 +148,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:baselineAligned="false"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -222,6 +223,131 @@
                         android:text="@string/summary_tmb_result_tv"
                         android:textColor="@color/black"
                         android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/container_box_alternative"
+                    android:minHeight="96dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/summaryHeartMaxLabelTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="center"
+                        android:paddingStart="20sp"
+                        android:paddingEnd="20sp"
+                        android:text="@string/summary_frequency_max"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/summaryHeartMaxValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:paddingStart="20sp"
+                        android:paddingEnd="20sp"
+                        android:text="@string/summary_heart_max_value"
+                        android:textColor="@color/black"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/container_box_over_weight"
+                    android:minHeight="96dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/summaryZoneLabelTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="center"
+                        android:paddingStart="20sp"
+                        android:paddingEnd="20sp"
+                        android:text="@string/summary_zone_label_tv"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/summaryLeveValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:paddingStart="20sp"
+                        android:paddingEnd="20sp"
+                        android:text="@string/summary_zone_value_tv"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/summaryQueimaValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:paddingStart="20sp"
+                        android:paddingEnd="20sp"
+                        android:text="@string/queima"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/summaryAerobicaValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:paddingStart="20sp"
+                        android:paddingEnd="20sp"
+                        android:text="@string/aerobica"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/summaryAnaerobicaValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:paddingStart="20sp"
+                        android:paddingEnd="20sp"
+                        android:text="@string/anaerobica"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>

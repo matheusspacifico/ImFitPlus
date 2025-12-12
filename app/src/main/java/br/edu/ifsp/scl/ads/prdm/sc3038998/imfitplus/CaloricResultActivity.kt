@@ -6,6 +6,8 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.ifsp.scl.ads.prdm.sc3038998.imfitplus.databinding.ActivityCaloricResultBinding
+import java.time.LocalDate
+import java.time.Period
 import java.util.Locale
 
 class CaloricResultActivity : AppCompatActivity() {
@@ -19,7 +21,17 @@ class CaloricResultActivity : AppCompatActivity() {
     private lateinit var returnBt: Button
     private lateinit var submitBt: Button
 
-    private fun calculateTmb(sex: String, weight: Double, height: Double, age: Int): Double {
+    private fun calculateAge(ageDateValue: String) : Int {
+        val ageSplit : List<String> = ageDateValue.split("/")
+        val ageConverted : LocalDate = LocalDate.of(ageSplit[2].toInt(), ageSplit[1].toInt(), ageSplit[0].toInt())
+
+        return Period.between(LocalDate.now(), ageConverted).years
+    }
+
+    private fun calculateTmb(sex: String, weight: Double, height: Double, ageDateValue: String): Double {
+
+        val age = calculateAge(ageDateValue)
+
         if (sex == "Masculino") {
             return 66 + (13.7 * weight) + (5 * height * 100) - (6.8 * age)
         }
@@ -37,7 +49,7 @@ class CaloricResultActivity : AppCompatActivity() {
         submitBt = acrb.caloricSubmitBt
 
         val name = intent.getStringExtra("EXTRA_NAME")
-        val age = intent.getIntExtra("EXTRA_AGE", 0)
+        val age = intent.getStringExtra("EXTRA_AGE")
         val height = intent.getDoubleExtra("EXTRA_HEIGHT", 0.0)
         val weight = intent.getDoubleExtra("EXTRA_WEIGHT", 0.0)
         val sex = intent.getStringExtra("EXTRA_SEX")
@@ -45,7 +57,7 @@ class CaloricResultActivity : AppCompatActivity() {
         val imc = intent.getDoubleExtra("EXTRA_IMC", 0.0)
         val category = intent.getStringExtra("EXTRA_CATEGORY")
 
-        val tmb = calculateTmb(sex ?: "Masculino", weight, height, age)
+        val tmb = calculateTmb(sex ?: "Masculino", weight, height, age ?: "01/01/2001")
 
         nameTv.text = name
         resultTv.text = String.format(Locale.US, "%.2f", tmb)

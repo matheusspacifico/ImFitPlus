@@ -39,7 +39,7 @@ class ImcResultActivity : AppCompatActivity() {
         submitBt = airb.imcSubmitBt
 
         val name = intent.getStringExtra("EXTRA_NAME")
-        val age = intent.getIntExtra("EXTRA_AGE", 0)
+        val age = intent.getStringExtra("EXTRA_AGE")
         val height = intent.getDoubleExtra("EXTRA_HEIGHT", 0.0)
         val weight = intent.getDoubleExtra("EXTRA_WEIGHT", 0.0)
         val sex = intent.getStringExtra("EXTRA_SEX")
